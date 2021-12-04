@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using AdventOfCode2021.Solutions;
+
+Console.WriteLine(new Day1().CalculatePartOne());
+Console.WriteLine(new Day1().CalculatePartTwo());
