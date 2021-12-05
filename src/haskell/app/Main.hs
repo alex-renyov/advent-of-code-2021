@@ -1,14 +1,10 @@
-{-# LANGUAGE QuasiQuotes #-}
-
 module Main where
 
-import Text.RawString.QQ
+import Day1(part1, part2)
 
 main :: IO ()
-main = putStrLn multiline
+main = do
+          putStrLn "Day 1"
+          putStrLn $ show part1
+          putStrLn $ show part2
 
-multiline :: String
-multiline = [r|123
-456
-789
-|]
