@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
 public partial class Day4
 {

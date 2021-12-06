@@ -1,11 +1,9 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
-public partial class Day4
+public partial class Day4 : IDay
 {
-    public int CalculatePartOne()
+    public long CalculatePartOne()
     {
-        Console.WriteLine("Day 4. Part 1");
-
         var numbers = GetInput();
         var (size, boards) = GetBoards();
 
@@ -29,10 +27,8 @@ public partial class Day4
         return 0;
     }
 
-    public int CalculatePartTwo()
+    public long CalculatePartTwo()
     {
-        Console.WriteLine("Day 4. Part 2");
-
         var numbers = GetInput();
         var (size, boards) = GetBoards();
 
@@ -62,6 +58,8 @@ public partial class Day4
 
         return 0;
     }
+
+    public int DayNumber => 4;
 
     private static bool IsWinning(int[,] board, int size, IReadOnlySet<int> drawn)
     {

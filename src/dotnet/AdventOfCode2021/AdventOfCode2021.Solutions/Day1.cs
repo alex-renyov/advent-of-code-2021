@@ -1,12 +1,10 @@
 
 namespace AdventOfCode2021.Solutions;
 
-public partial class Day1
+public partial class Day1 : IDay
 {
-    public int CalculatePartOne()
+    public long CalculatePartOne()
     {
-        Console.WriteLine("Day 1. Part 1");
-
         var values = ParseValues();
         return values.Skip(1)
           .Zip(values, (next, prev) => next > prev)
@@ -14,10 +12,8 @@ public partial class Day1
           .Count();
     }
 
-    public int CalculatePartTwo()
+    public long CalculatePartTwo()
     {
-        Console.WriteLine("Day 1. Part 1");
-
         static int Add(int a, int b) => a + b;
 
         var values = ParseValues();
@@ -31,6 +27,8 @@ public partial class Day1
           .Where(val => val)
           .Count();
     }
+
+    public int DayNumber => 1;
 
     private static int[] ParseValues()
     {

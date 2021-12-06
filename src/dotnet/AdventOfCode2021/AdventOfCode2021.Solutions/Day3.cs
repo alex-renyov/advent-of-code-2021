@@ -1,11 +1,9 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
-public partial class Day3
+public partial class Day3 : IDay
 {
-    public int CalculatePartOne()
+    public long CalculatePartOne()
     {
-        Console.WriteLine("Day 3. Part 1");
-
         var lines = Input.Split(Environment.NewLine);
         var length = lines[0].Length;
 
@@ -29,10 +27,8 @@ public partial class Day3
         return gammaValue * epsilonValue;
     }
 
-    public int CalculatePartTwo()
+    public long CalculatePartTwo()
     {
-        Console.WriteLine("Day 3. Part 2");
-
         var lines = Input.Split(Environment.NewLine);
         var length = lines[0].Length;
 
@@ -61,4 +57,6 @@ public partial class Day3
 
         return oxygen * co2;
     }
+
+    public int DayNumber => 3;
 }

@@ -1,15 +1,13 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
-public partial class Day5
+public partial class Day5 : IDay
 {
     private record struct Coords(int X, int Y);
 
     private record struct Line(Coords From, Coords To);
 
-    public int CalculatePartOne()
+    public long CalculatePartOne()
     {
-        Console.WriteLine("Day 5. Part 1");
-
         var lines = ParseInput();
         var withoutDiagonal = lines.Where(l => l.From.X == l.To.X || l.From.Y == l.To.Y)
           .ToArray();
@@ -20,10 +18,8 @@ public partial class Day5
         return field.Where(f => f.Value > 1).Count();
     }
 
-    public int CalculatePartTwo()
+    public long CalculatePartTwo()
     {
-        Console.WriteLine("Day 5. Part 2");
-
         var lines = ParseInput();
 
         var field = new Dictionary<Coords, int>();
@@ -31,6 +27,8 @@ public partial class Day5
 
         return field.Where(f => f.Value > 1).Count();
     }
+
+    public int DayNumber => 5;
 
     private void Print(Dictionary<Coords, int> field)
     {
