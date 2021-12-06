@@ -15,4 +15,8 @@ fun main() {
 
     println(Day5().part1())
     println(Day5().part2())
+
+    println(Day6().part1())
+    println(Day6().part2())
+
 }
