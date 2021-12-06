@@ -2,7 +2,7 @@
 
 public partial class Day3
 {
-  private const string Input = @"011001101000
+    private const string Input = @"011001101000
 010101111100
 000000111101
 001001001010

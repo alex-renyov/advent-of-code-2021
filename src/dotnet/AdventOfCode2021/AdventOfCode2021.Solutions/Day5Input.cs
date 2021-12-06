@@ -2,7 +2,7 @@
 
 public partial class Day5
 {
-  private const string Input = @"976,35 -> 24,987
+    private const string Input = @"976,35 -> 24,987
 552,172 -> 870,490
 647,640 -> 841,834
 580,460 -> 580,749

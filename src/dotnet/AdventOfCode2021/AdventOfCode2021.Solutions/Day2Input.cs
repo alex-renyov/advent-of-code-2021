@@ -2,7 +2,7 @@
 
 public partial class Day2
 {
-  private const string Input = @"forward 2
+    private const string Input = @"forward 2
 down 2
 forward 6
 forward 8

@@ -2,7 +2,7 @@
 
 public partial class Day1
 {
-  private const string Input = @"140
+    private const string Input = @"140
 154
 165
 150
