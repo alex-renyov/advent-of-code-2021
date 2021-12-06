@@ -1,4 +1,4 @@
-﻿using AdventOfCode2021.Solutions;
+using AdventOfCode2021.Solutions;
 
 Console.WriteLine(new Day1().CalculatePartOne());
 Console.WriteLine(new Day1().CalculatePartTwo());
@@ -14,3 +14,6 @@ Console.WriteLine(new Day4().CalculatePartTwo());
 
 Console.WriteLine(new Day5().CalculatePartOne());
 Console.WriteLine(new Day5().CalculatePartTwo());
+
+Console.WriteLine(new Day6().CalculatePartOne());
+Console.WriteLine(new Day6().CalculatePartTwo());
