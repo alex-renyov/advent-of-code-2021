@@ -1,9 +1,21 @@
-module Day1Input(inputValue) where
+module Day1Input(inputValues, testValues) where
 
 import Text.RawString.QQ
 
-inputValue :: String
-inputValue = [r|140
+testValues :: String
+testValues = [r|199
+200
+208
+210
+200
+207
+240
+269
+260
+263|]
+
+inputValues :: String
+inputValues = [r|140
 154
 165
 150

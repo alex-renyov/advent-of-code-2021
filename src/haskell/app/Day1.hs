@@ -1,7 +1,7 @@
 module Day1(part1, part2) where
 
 import Data.Functor
-import Day1Input(inputValue)
+import qualified Day1Input
 
 part1 :: Int
 part1 = increasesCount inputNumbers
@@ -15,4 +15,4 @@ increasesCount :: [Int] -> Int
 increasesCount values = length $ filter id $ zipWith (<) values $ drop 1 values
 
 inputNumbers :: [Int]
-inputNumbers = map read $ lines inputValue
+inputNumbers = map read $ lines Day1Input.inputValues
