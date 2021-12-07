@@ -1,5 +1,3 @@
-{-# LANGUAGE QuasiQuotes #-}
-
 module Day1Input(inputValue) where
 
 import Text.RawString.QQ

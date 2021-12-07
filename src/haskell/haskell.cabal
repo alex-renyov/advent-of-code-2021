@@ -28,8 +28,8 @@ executable adventOfCode2021
     other-modules:    Day1,
                       Day1Input
 
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    default-extensions: QuasiQuotes
+
     build-depends:    base ^>=4.16.0.0,
                       raw-strings-qq ^>=1.1
     hs-source-dirs:   app
