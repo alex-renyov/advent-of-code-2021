@@ -3,6 +3,7 @@ bin/
 .vs/
 .idea/
 .gradle/
+.vscode/
 gradle/
 build/
 dist-newstyle/
