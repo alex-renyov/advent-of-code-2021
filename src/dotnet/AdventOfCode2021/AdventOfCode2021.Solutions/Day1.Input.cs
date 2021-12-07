@@ -1,7 +1,18 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
 public partial class Day1
 {
+    private const string TestInput = @"199
+200
+208
+210
+200
+207
+240
+269
+260
+263";
+
     private const string Input = @"140
 154
 165

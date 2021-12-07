@@ -1,13 +1,10 @@
 package ru.renev.adventofcode2021
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
-import java.util.*
-
 class Day3 {
     fun part1() : Int {
         println("Day 3 part 1")
 
-        val lines = Day3Input.value.split("\n")
+        val lines = Day3Input.values.split("\n")
         val length = lines[0].length;
 
         val gamma = CharArray(length)
@@ -31,7 +28,7 @@ class Day3 {
     fun part2() : Int {
         println("Day 3 part 2")
 
-        val lines = Day3Input.value.split("\n")
+        val lines = Day3Input.values.split("\n")
         val length = lines[0].length;
 
         val oxygen = calculateNumber(lines, length) { count0, count1 -> if (count1 >= count0) '1' else '0' }

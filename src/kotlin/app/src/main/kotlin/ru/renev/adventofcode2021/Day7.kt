@@ -38,6 +38,6 @@ class Day7 {
     }
 
     private fun parseInput(): List<Int> {
-        return Day7Input.input.split(",").map { it.toInt() }
+        return Day7Input.values.split(",").map { it.toInt() }
     }
 }

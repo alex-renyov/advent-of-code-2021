@@ -1,7 +1,18 @@
 package ru.renev.adventofcode2021
 
 object Day1Input {
-    const val value: String = """140
+    const val testValues: String = """199
+200
+208
+210
+200
+207
+240
+269
+260
+263"""
+
+    const val values: String = """140
 154
 165
 150

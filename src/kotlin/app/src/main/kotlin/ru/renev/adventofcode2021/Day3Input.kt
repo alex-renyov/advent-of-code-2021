@@ -1,7 +1,20 @@
 package ru.renev.adventofcode2021
 
 object Day3Input {
-    const val value: String = """011001101000
+    const val testValues: String = """00100
+11110
+10110
+10111
+10101
+01111
+00111
+11100
+10000
+11001
+00010
+01010"""
+
+    const val values: String = """011001101000
 010101111100
 000000111101
 001001001010

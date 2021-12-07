@@ -1,7 +1,14 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
 public partial class Day2
 {
+    private const string TestInput = @"forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2";
+
     private const string Input = @"forward 2
 down 2
 forward 6

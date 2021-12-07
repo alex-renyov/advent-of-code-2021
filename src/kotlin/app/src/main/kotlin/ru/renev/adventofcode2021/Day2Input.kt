@@ -1,7 +1,14 @@
 package ru.renev.adventofcode2021
 
 object Day2Input {
-    const val value: String = """forward 2
+    const val testValues: String = """forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2"""
+
+    const val values: String = """forward 2
 down 2
 forward 6
 forward 8

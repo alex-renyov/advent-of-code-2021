@@ -25,7 +25,7 @@ class Day1 {
     }
 
     private fun getParts() : List<Int> {
-        return Day1Input.value.
+        return Day1Input.values.
             split("\n").
             map { it.toInt() }.
             toList()

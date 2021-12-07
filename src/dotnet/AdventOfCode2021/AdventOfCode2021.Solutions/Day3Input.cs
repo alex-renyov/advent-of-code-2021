@@ -1,7 +1,20 @@
-﻿namespace AdventOfCode2021.Solutions;
+namespace AdventOfCode2021.Solutions;
 
 public partial class Day3
 {
+    private const string TestInput = @"00100
+11110
+10110
+10111
+10101
+01111
+00111
+11100
+10000
+11001
+00010
+01010";
+
     private const string Input = @"011001101000
 010101111100
 000000111101
