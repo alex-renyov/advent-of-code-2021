@@ -27,15 +27,15 @@ class Day6 {
     }
 
     private fun calculateCount(days: Int) : Long {
-        var lanterns = parseInput().groupBy { it }.
-            map { LanternsGroup(it.key, it.value.count().toLong()) }.
-            toList()
+        var lanterns = parseInput().groupBy { it }
+            .map { LanternsGroup(it.key, it.value.count().toLong()) }
+            .toList()
 
         repeat(days) { _ ->
-            lanterns = lanterns.flatMap { it.nextGroup() }.
-            groupBy { it.timer }.
-            map { grp -> LanternsGroup(grp.key, grp.value.sumOf { it.count }) }.
-            toList()
+            lanterns = lanterns.flatMap { it.nextGroup() }
+                .groupBy { it.timer }
+                .map { grp -> LanternsGroup(grp.key, grp.value.sumOf { it.count }) }
+                .toList()
         }
 
         return lanterns.fold(0L) { a, b -> a + b.count }

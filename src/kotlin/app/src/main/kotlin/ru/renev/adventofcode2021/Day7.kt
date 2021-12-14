@@ -24,10 +24,11 @@ class Day7 {
     private fun calculateMinimumFuel(fuelCalculator: (distance: Int) -> Int): Long {
         val input = parseInput()
 
-        val minPosition = input.minByOrNull { it } ?: 0
-        val maxPosition = input.maxByOrNull { it } ?: 0
+        val minPosition = input.minOf { it }
+        val maxPosition = input.maxOf { it }
 
-        val crabs = input.groupBy { it }.map { Crab(it.key, it.value.count()) }
+        val crabs = input.groupBy { it }
+            .map { Crab(it.key, it.value.count()) }
 
         val result = (minPosition..maxPosition).map { position ->
             crabs.map { Travel(it, abs(it.position - position)) }.fold(0L) { sum, pos -> sum + fuelCalculator(pos.distance) * pos.crab.count }
