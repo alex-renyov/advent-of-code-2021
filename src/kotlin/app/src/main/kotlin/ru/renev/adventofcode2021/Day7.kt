@@ -31,9 +31,14 @@ class Day7 {
             .map { Crab(it.key, it.value.count()) }
 
         val result = (minPosition..maxPosition).map { position ->
-            crabs.map { Travel(it, abs(it.position - position)) }.fold(0L) { sum, pos -> sum + fuelCalculator(pos.distance) * pos.crab.count }
+            crabs.map {
+                Travel(it, abs(it.position - position))
+            }
+                .fold(0L) { sum, pos ->
+                    sum + fuelCalculator(pos.distance) * pos.crab.count
+                }
                 .let { Result(position, it) }
-        }.minByOrNull { it.totalFuel } ?: Result(0, 0)
+        }.maxByOrNull { it.totalFuel }!!
 
         return result.totalFuel
     }

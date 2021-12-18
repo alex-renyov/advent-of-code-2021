@@ -1,7 +1,7 @@
 package ru.renev.adventofcode2021
 
 class Day2 {
-    fun part1() : Int {
+    fun part1(): Int {
         println("Day 2 part 1")
 
         val parts = Day2Input.values.split("\n")
@@ -13,16 +13,16 @@ class Day2 {
 
             when (action) {
                 "forward" -> pos += amountValue
-                "down"    -> depth += amountValue
-                "up"      -> depth -= amountValue
-                else      -> throw RuntimeException("Invalid action $action")
+                "down" -> depth += amountValue
+                "up" -> depth -= amountValue
+                else -> throw RuntimeException("Invalid action $action")
             }
         }
 
         return pos * depth
     }
 
-    fun part2() : Int {
+    fun part2(): Int {
         println("Day 2 part 2")
 
         val parts = Day2Input.values.split("\n")
@@ -38,9 +38,9 @@ class Day2 {
                     pos += amountValue
                     depth += aim * amountValue
                 }
-                "down"    -> aim += amountValue
-                "up"      -> aim -= amountValue
-                else      -> throw RuntimeException("Invalid action $action")
+                "down" -> aim += amountValue
+                "up" -> aim -= amountValue
+                else -> throw RuntimeException("Invalid action $action")
             }
         }
 

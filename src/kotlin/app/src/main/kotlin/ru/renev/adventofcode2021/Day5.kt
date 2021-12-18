@@ -13,7 +13,7 @@ class Day5 {
         }
     }
 
-    fun part1() : Int {
+    fun part1(): Int {
         println("Day 5 part 1")
 
         val lines = parseInput()
@@ -25,7 +25,7 @@ class Day5 {
         return field.filter { (_, count) -> count > 1 }.count()
     }
 
-    fun part2() : Int {
+    fun part2(): Int {
         println("Day 5 part 2")
 
         val lines = parseInput()
@@ -41,10 +41,10 @@ class Day5 {
         val maxY = field.maxOf { (point, _) -> point.y }
 
         for (x in (0..maxX)) {
-            val line = (0..maxY).map {
-                    y -> field.getOrDefault(Coords(y,x), 0) }.
-                            joinToString("") { if (it == 0) "." else it.toString()
-                    }
+            val line = (0..maxY).map { y -> field.getOrDefault(Coords(y, x), 0) }
+                .joinToString("") {
+                    if (it == 0) "." else it.toString()
+                }
             println(line)
         }
     }
@@ -72,10 +72,10 @@ class Day5 {
         }
     }
 
-    private fun linePoints(line: Line) : List<Coords> {
+    private fun linePoints(line: Line): List<Coords> {
         val xs = makeSequence(line.from.x, line.to.x)
         val ys = makeSequence(line.from.y, line.to.y)
-        return xs.zip(ys).map { (x, y) -> Coords(x,y) }.toList()
+        return xs.zip(ys).map { (x, y) -> Coords(x, y) }.toList()
     }
 
     private fun makeSequence(from: Int, to: Int): Sequence<Int> {
@@ -87,16 +87,14 @@ class Day5 {
 
 
     private fun parseInput(): List<Line> {
-        return Day5Input.values.
-            split("\n").
-            map {
-                line -> line.split(" -> ").map {
-                    pair -> pair.split(",").
-                        map { it.toInt() }.
-                        let { Coords(it[0], it[1]) }
-                }.let {
-                    Line(it[0], it[1])
-                }
+        return Day5Input.values.split("\n").map { line ->
+            line.split(" -> ").map { pair ->
+                pair.split(",")
+                    .map { it.toInt() }
+                    .let { Coords(it[0], it[1]) }
+            }.let {
+                Line(it[0], it[1])
             }
+        }
     }
 }

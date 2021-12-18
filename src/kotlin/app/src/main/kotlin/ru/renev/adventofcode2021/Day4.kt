@@ -1,7 +1,7 @@
 package ru.renev.adventofcode2021
 
 class Day4 {
-    fun part1() : Int {
+    fun part1(): Int {
         println("Day 4 part 1")
 
         val numbers = parseNumbers()
@@ -16,16 +16,16 @@ class Day4 {
                 continue
             }
 
-            val unmarkedSum = getValues(winning, size).
-                    filter { !drawn.contains(it) }.
-                    sum()
+            val unmarkedSum = getValues(winning, size)
+                .filter { !drawn.contains(it) }
+                .sum()
             return unmarkedSum * number
         }
 
         return 0
     }
 
-    fun part2() : Int {
+    fun part2(): Int {
         println("Day 4 part 2")
 
         val numbers = parseNumbers()
@@ -55,17 +55,17 @@ class Day4 {
         return 0
     }
 
-    private fun isWinning(board: List<List<Int>>, size: Int, drawn: Set<Int>) : Boolean {
-        return makeLines(board, size).any {
-            line -> line.all { drawn.contains(it) }
+    private fun isWinning(board: List<List<Int>>, size: Int, drawn: Set<Int>): Boolean {
+        return makeLines(board, size).any { line ->
+            line.all { drawn.contains(it) }
         }
     }
 
     private fun getValues(board: List<List<Int>>, size: Int): Sequence<Int> {
         return sequence<Int> {
-            (0 until size).forEach {
-                x -> (0 until size).forEach {
-                    y -> yield(board[x][y])
+            (0 until size).forEach { x ->
+                (0 until size).forEach { y ->
+                    yield(board[x][y])
                 }
             }
         }
@@ -80,22 +80,21 @@ class Day4 {
         }
     }
 
-    private fun parseNumbers() : List<Int> {
+    private fun parseNumbers(): List<Int> {
         return Day4Input.numbers.split(',').map { it.toInt() }
     }
 
     private fun parseBoards(): Pair<List<List<List<Int>>>, Int> {
-        val boards = Day4Input.boards.trim().
-            split("\n\n")
-            .map {
-                it.trim().
-                    split("\n").
-                    filter { it.isNotEmpty() }.
-                    map {
-                        it.trim().
-                            split(' ').
-                            filter { it.isNotEmpty() }.
-                            map { it.toInt() }
+        val boards = Day4Input.boards.trim().split("\n\n")
+            .map { group ->
+                group.trim()
+                    .split("\n")
+                    .filter { it.isNotEmpty() }
+                    .map { line ->
+                        line.trim()
+                            .split(' ')
+                            .filter { it.isNotEmpty() }
+                            .map { it.toInt() }
                     }
             }
 
