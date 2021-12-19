@@ -10,8 +10,6 @@ public sealed partial class Day9 : IDay
         }
     }
     
-    public int DayNumber => 9;
-    
     public long CalculatePartOne()
     {
         var data = ParseInput();

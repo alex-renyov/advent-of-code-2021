@@ -57,6 +57,4 @@ public partial class Day3 : IDay
 
         return oxygen * co2;
     }
-
-    public int DayNumber => 3;
 }

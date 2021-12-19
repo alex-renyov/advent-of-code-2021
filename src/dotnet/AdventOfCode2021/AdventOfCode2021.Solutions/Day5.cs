@@ -28,8 +28,6 @@ public partial class Day5 : IDay
         return field.Where(f => f.Value > 1).Count();
     }
 
-    public int DayNumber => 5;
-
     private void Print(Dictionary<Coords, int> field)
     {
         var maxX = field.Keys.Select(k => k.X).OrderByDescending(a => a).First();

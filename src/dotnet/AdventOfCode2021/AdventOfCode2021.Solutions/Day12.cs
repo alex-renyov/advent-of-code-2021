@@ -6,8 +6,6 @@ public partial class Day12 : IDay
 {
     private record Way(string From, string To);
     
-    public int DayNumber => 12;
-    
     public long CalculatePartOne()
     {
         return Calculate(CanAddTo1);

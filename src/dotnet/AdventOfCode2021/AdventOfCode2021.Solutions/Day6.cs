@@ -27,8 +27,6 @@ public partial class Day6 : IDay
         return CalculateCount(256);
     }
 
-    public int DayNumber => 6;
-
     private static long CalculateCount(int days)
     {
         var lanterns = ParseInput().GroupBy(val => val)

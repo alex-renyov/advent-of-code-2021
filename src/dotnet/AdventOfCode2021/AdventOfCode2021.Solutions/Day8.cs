@@ -21,8 +21,6 @@ public partial class Day8 : IDay
     private static readonly Dictionary<string, int> ReversedNumberDigits =
         NumberDigits.ToDictionary(p => p.Value, p => p.Key);
 
-    public int DayNumber => 8;
-    
     public long CalculatePartOne()
     {
         var input = ParseInput();

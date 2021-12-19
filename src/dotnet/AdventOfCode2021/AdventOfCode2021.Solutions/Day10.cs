@@ -2,8 +2,6 @@
 
 public sealed partial class Day10 : IDay
 {
-    public int DayNumber => 10;
-
     private static string[] Parsed => Input.Split(Environment.NewLine);
 
     private static readonly Dictionary<char, int> InvalidCharScore = new()

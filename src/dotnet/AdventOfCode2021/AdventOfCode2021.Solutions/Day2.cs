@@ -49,6 +49,4 @@ public partial class Day2 : IDay
 
         return lastCoordinates.Depth * lastCoordinates.Position;
     }
-
-    public int DayNumber => 2;
 }

@@ -8,8 +8,6 @@ public partial class Day7 : IDay
 
     private record struct Result(int POsition, long TotalFuel);
 
-    public int DayNumber => 7;
-
     public long CalculatePartOne()
     {
         return CalculateMinimumFuel(x => x);

@@ -59,8 +59,6 @@ public partial class Day4 : IDay
         return 0;
     }
 
-    public int DayNumber => 4;
-
     private static bool IsWinning(int[,] board, int size, IReadOnlySet<int> drawn)
     {
         return MakeLines(board, size).Any(line => line.All(drawn.Contains));

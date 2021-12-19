@@ -28,8 +28,6 @@ public partial class Day1 : IDay
           .Count();
     }
 
-    public int DayNumber => 1;
-
     private static int[] ParseValues()
     {
         return Input.Split(Environment.NewLine)
