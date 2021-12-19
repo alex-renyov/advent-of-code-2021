@@ -67,7 +67,7 @@ public partial class Day14 : IDay
                 .Select(grp =>
                     new GrowthResult(
                         grp.Key, 
-                        grp.Select(p => p.Count).Sum()))
+                        grp.Sum(p => p.Count)))
                 .ToArray();
         }
 
@@ -77,7 +77,7 @@ public partial class Day14 : IDay
                 new { ch = p.Place.Right, count = p.Count }
             })
             .GroupBy(d => d.ch)
-            .Select(grp => new { ch = grp.Key, count = grp.Select(g => g.count).Sum() })
+            .Select(grp => new { ch = grp.Key, count = grp.Sum(g => g.count) })
             .ToDictionary(d => d.ch, d => d.count);
 
         resultChars[source.First()]++;
