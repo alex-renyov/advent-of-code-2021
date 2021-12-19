@@ -69,8 +69,6 @@ public partial class Day14 : IDay
                         grp.Key, 
                         grp.Select(p => p.Count).Sum()))
                 .ToArray();
-            
-            Console.WriteLine($"Step {i}");
         }
 
         var resultChars = currentPairs.SelectMany(p => new[]
@@ -110,17 +108,6 @@ public partial class Day14 : IDay
             })
             .Concat(new[] { source.Last() })
             .ToArray();
-    }
-
-    private static void Print(char[] source)
-    {
-        Console.WriteLine();
-        foreach (var grp in source.GroupBy(ch => ch).Select(g => new {ch = g.Key, count = g.LongCount()}).OrderByDescending(g => g.count))
-        {
-            Console.Write($"{grp.ch}({grp.count}) ");
-        }
-        Console.WriteLine();
-        Console.WriteLine();
     }
 
     private static (char[] source, GrowthRule[] rules) ParseInput()
