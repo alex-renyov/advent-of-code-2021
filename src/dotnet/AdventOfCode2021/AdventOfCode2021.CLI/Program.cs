@@ -6,7 +6,7 @@ var instances = types.Select(t => Activator.CreateInstance(t) as IDay ?? throw n
     .OrderBy(d => d.DayNumber)
     .ToArray();
 
-foreach (var day in instances)
+foreach (var day in instances.Where(i => i.DayNumber == 19))
 {
     Console.WriteLine($"Day {day.DayNumber} part 1");
     Console.WriteLine(day.CalculatePartOne());
